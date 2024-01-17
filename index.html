@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="gameWrap" class="clearfix">
+        <h1 id="mainHeading">Rock, Paper, Scissor</h1>
+        <h2 id="msgHeading">Who will be the winner?</h2>
+        <div id="userWrap">
+            <label for="userInput" id="userInputLbl">Enter Your Choice</label>
+            <input type="text" name="userInput" id="userInput" />
+        </div>
+        <div id="cpuWrap">
+            <label for="cpuResult" id="cpuResultLbl">The Robot Chooses</label>
+            <span id="cpuResult"></span>
+        </div>
+        <button id="goBtn">GO!</button> 
+         <button id="resetBtn">RESET!</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
