@@ -3,24 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rock Paper Scissors</title>
+    <title>Rock.Paper.Scissors</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
     <div id="gameWrap" class="clearfix">
-        <h1 id="mainHeading">Rock, Paper, Scissor</h1>
+        <h1 id="mainHeading">Rock . Paper . Scissors</h1>
         <h2 id="msgHeading">Who will be the winner?</h2>
         <div id="userWrap">
-            <label for="userInput" id="userInputLbl">Enter Your Choice</label>
-            <input type="text" name="userInput" id="userInput" />
+            <label for="userInput" id="userInputLbl">Select Your Choice:</label><br>
+
+
+
+<input id="userChoice1" type="radio" name="userChoice" onclick="myFunction(this.value)" value="rock">rock
+
+<input id="userChoice2" type="radio" name="userChoice" onclick="myFunction(this.value)" value="paper">paper        
+  
+<input id="userChoice3" type="radio" name="userChoice" onclick="myFunction(this.value)" value="scissors">scissors
+
+            <input type="text" name="userInput" id="userInput" disabled/>
+
         </div>
         <div id="cpuWrap">
-            <label for="cpuResult" id="cpuResultLbl">The Robot Chooses</label>
+            <label for="cpuResult" id="cpuResultLbl">The Computer Choice:</label>
             <span id="cpuResult"></span>
         </div>
-        <button id="goBtn">GO!</button> 
-         <button id="resetBtn">RESET!</button>
+           <div id="playerWrap">
+            <label for="playerScoreResult" id="playerScoreResultLbl">Your Score:</label>
+            <span id="playerScoreResult"></span>
+        </div>
+           <div id="compWrap">
+            <label for="compScoreResult" id="compScoreResultLbl">Computer Score:</label>
+            <span id="compScoreResult"></span>
+        </div>
+        <div>
+          <center>
+        <button id="goBtn">PLAY !</button>
+         
+         <button id="resetBtn">RESET !</button>
+          </center>
+        </div>
     </div>
     <script src="script.js"></script>
   </body>
+  <script>
+function myFunction(userChoice) {
+  document.getElementById("userInput").value = userChoice;
+}
+
+</script>
 </html>
